@@ -1,0 +1,74 @@
+.clap-button{
+    align-self: center;
+    justify-self: center;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    box-shadow: var(--shadow-light);
+    transition: .3s;
+
+}
+
+.clap-button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.clap-button:hover::after{
+    animation: splashSpread infinite forwards 2s 0s  normal ;
+}
+
+
+
+
+.clap-icon{
+    width: 8rem;
+    height: 8rem;
+    fill: var(--green-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.clap-count{
+    display: flex;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 6rem;
+    height: 6rem;
+    color: #FFF;
+    background-color: var(--green-color);
+    bottom: 22rem;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.clap-total{
+    color: #CCC;
+}
+
+@keyframes splashSpread {
+    0% {
+        opacity: 1;
+        box-shadow: var(--shadow-light);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: var(--shadow-dark);
+        opacity: 0;
+        transform: scale(1);
+    }
+  }
